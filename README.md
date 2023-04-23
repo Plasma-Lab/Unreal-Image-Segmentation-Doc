@@ -24,7 +24,7 @@ All elements that you haven't tagged will still display their original materials
 
 ## Capturing Results:
 
-To take captures, go to the plugin content folder and drop the **"BP_Image_Seg_Camera"** in your scene, which will serve as a camera. You can view what the camera sees by opening the "RT_renderTarget_ImgSeg" render target. Set the angle and the position of your camera like you would with a normal camera.
+To take captures, go to the plugin content folder and drop the **"BP_Image_Seg_Camera"** in your scene, which will serve as a camera. You can view what the camera sees by opening the **"RT_renderTarget_ImgSeg"** render target in the Utils folder. Set the angle and the position of your camera like you would with a normal camera.
 
 You can set up your own movements for the camera, such as placing it on the hood of an AI car or place it behind your controler pawn and move your character around while captures are being taken.
 
