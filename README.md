@@ -1,1 +1,62 @@
-# Unreal-Image-Segmentation-Doc
+# Unreal Image Segmentation Plugin
+
+Welcome to the documentation for the Image Segmentation plugin, an Unreal Engine plugin that allows to generate data to train your semantic segmentation algorithms. This plugin is designed to make it easier and more efficient for data scientist to collect and label computer vision data.
+
+## Prerequisites
+First, go to your project settings, search for **"Custom Depth-Stencil Pass"** and set it as **"EnabledWithStencil"**.
+Optionnaly, if you'd like to generate data while unreal is in the background you should go to Editor Preferences, search for **"Use Less CPU when in Background"** and uncheck it.
+
+## Labeling Actors
+For each element in your scene you wish to label, add two ***actor tags*** to your element's actor: the first tag is your label (e.g., "car"), and the second tag must be "seg". 
+
+![labeling compnents](https://github.com/PixelPerfect-Tech/Unreal-Image-Segmentation-Doc/blob/main/tags.PNG?raw=true)
+
+All elements in the scene that hasn't been tagged will be labeled as the “empty” category (index 0).
+
+## Testing Segmentation
+
+To test the segmentation, drop the "Blueprint" in your scene and press play in the editor. You will see the segmentation colors.
+
+
+
+All elements that you haven't tagged will still display their original materials, do not worry, they are still segmented as the “empty” category.
+
+> **Do not forget** to remove this blueprint from the scene **before** taking captures.\
+
+
+IMAGE
+
+## Capturing Results:
+
+To take captures, go to the plugin content folder and drop the **"BP_Image_Seg_Camera"** in your scene, which will serve as a camera. You can view what the camera sees by opening the "RT_renderTarget_ImgSeg" render target. Set the angle and the position of your camera like you would with a normal camera.
+
+You can set up your own movements for the camera, such as placing it on the hood of an AI car or place it behind your controler pawn and move your character around while captures are being taken.
+
+
+![Place the camera](https://github.com/PixelPerfect-Tech/Unreal-Image-Segmentation-Doc/blob/main/BP_camera.PNG?raw=true)
+  
+
+When you are ready to take captures, open the plugin in Window > Image Segmentation. Select the folder where you want to save your captures, the time between each capture, and the number of captures. Press play in the editor, and then press capture.
+
+  
+
+## Results
+
+The plugin will generate two folders and one CSV file. The CSV file contains the indexes of your labels.
+
+image
+
+The "images" folder contains the unprocessed screen captures. The "labels" folder contains PNG files containing the labels of your objects encoded in the Red channel of the image. Please note that this file won't open with a normal image viewer. An included Python notebook file will show you how to display the label image and how to use it with an image segmentation model.
+
+
+
+# FAQ
+
+## What king of meshes can I label? 
+
+You can label most kinds of meshes, including static mesh, skeletal mesh, sky sphere, and spline mesh. However, please note that you cannot attribute a label to landscapes, so it is recommended to avoid using them. If you must use a landscape element in your scene, you can export it as a mesh and re-import it.
+
+
+## My label images are black, what is going on?
+
+The plugin is producing a PNG image containing the class of the object in the red channel (first channel). You will not be able to open it with an image viewer.
