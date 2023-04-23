@@ -10,14 +10,12 @@ Optionnaly, if you'd like to generate data while unreal is in the background you
 For each element in your scene you wish to label, add two ***actor tags*** to your element's actor: the first tag is your label (e.g., "car"), and the second tag must be "seg". 
 
 ![Labeling Actors](https://github.com/Plasma-Lab/Unreal-Image-Segmentation-Doc/blob/main/images/tags.PNG?raw=true)
+
 All elements in the scene that hasn't been tagged will be labeled as the “empty” category (index 0).
 
 ## Testing Segmentation
 
 To test the segmentation, drop the "Blueprint" in your scene and press play in the editor. You will see the segmentation colors.
-
-
-
 All elements that you haven't tagged will still display their original materials, do not worry, they are still segmented as the “empty” category.
 
 > **Do not forget** to remove this blueprint from the scene **before** taking captures.\
