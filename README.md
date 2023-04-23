@@ -9,8 +9,7 @@ Optionnaly, if you'd like to generate data while unreal is in the background you
 ## Labeling Actors
 For each element in your scene you wish to label, add two ***actor tags*** to your element's actor: the first tag is your label (e.g., "car"), and the second tag must be "seg". 
 
-![labeling compnents](https://github.com/PixelPerfect-Tech/Unreal-Image-Segmentation-Doc/blob/main/tags.PNG?raw=true)
-
+![Labeling Actors](https://github.com/Plasma-Lab/Unreal-Image-Segmentation-Doc/blob/main/images/tags.PNG?raw=true)
 All elements in the scene that hasn't been tagged will be labeled as the “empty” category (index 0).
 
 ## Testing Segmentation
@@ -23,8 +22,7 @@ All elements that you haven't tagged will still display their original materials
 
 > **Do not forget** to remove this blueprint from the scene **before** taking captures.\
 
-
-IMAGE
+![test picture](https://github.com/Plasma-Lab/Unreal-Image-Segmentation-Doc/blob/main/images/test.PNG?raw=true)
 
 ## Capturing Results:
 
@@ -32,9 +30,7 @@ To take captures, go to the plugin content folder and drop the **"BP_Image_Seg_C
 
 You can set up your own movements for the camera, such as placing it on the hood of an AI car or place it behind your controler pawn and move your character around while captures are being taken.
 
-
-![Place the camera](https://github.com/PixelPerfect-Tech/Unreal-Image-Segmentation-Doc/blob/main/BP_camera.PNG?raw=true)
-  
+![Place the camera](https://github.com/Plasma-Lab/Unreal-Image-Segmentation-Doc/blob/main/images/BP_camera.PNG?raw=true)
 
 When you are ready to take captures, open the plugin in Window > Image Segmentation. Select the folder where you want to save your captures, the time between each capture, and the number of captures. Press play in the editor, and then press capture.
 
@@ -43,9 +39,6 @@ When you are ready to take captures, open the plugin in Window > Image Segmentat
 ## Results
 
 The plugin will generate two folders and one CSV file. The CSV file contains the indexes of your labels.
-
-image
-
 The "images" folder contains the unprocessed screen captures. The "labels" folder contains PNG files containing the labels of your objects encoded in the Red channel of the image. Please note that this file won't open with a normal image viewer. An included Python notebook file will show you how to display the label image and how to use it with an image segmentation model.
 
 
