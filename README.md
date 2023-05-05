@@ -4,6 +4,7 @@ Welcome to the documentation for the Image Segmentation plugin, an Unreal Engine
 
 ## Prerequisites
 First, go to your project settings, search for **"Custom Depth-Stencil Pass"** and set it as **"EnabledWithStencil"**.
+When creating a project, avoid creating an Architecture project as they contains uncompatible settings.
 Optionnaly, if you'd like to generate data while unreal is in the background you should go to Editor Preferences, search for **"Use Less CPU when in Background"** and uncheck it.
 
 ## Labeling Actors
