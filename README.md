@@ -1,6 +1,6 @@
 # Unreal Image Segmentation Plugin
 
-Welcome to the documentation for the Image Segmentation plugin, an Unreal Engine plugin that allows to generate data to train your semantic segmentation algorithms. This plugin is designed to make it easier and more efficient for data scientist to collect and label computer vision data.
+Welcome to the documentation for the [Unreal Image Segmentation plugin](https://www.unrealengine.com/marketplace/en-US/product/image-segmentation-for-machine-learning), an Unreal Engine plugin that allows to generate data to train your semantic segmentation algorithms. This plugin is designed to make it easier and more efficient for data scientist to collect and label computer vision data.
 
 ## Prerequisites
 First, go to your project settings, search for **"Custom Depth-Stencil Pass"** and set it as **"EnabledWithStencil"**.
