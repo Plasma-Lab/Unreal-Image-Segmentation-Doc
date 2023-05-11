@@ -21,7 +21,7 @@ All elements in the scene that hasn't been tagged will be labeled as the “empt
 To test the segmentation, drop the **"BP_Segmentation_test"** blueprint in your scene and press play in the editor. You will see the segmentation colors.
 All elements that you haven't tagged will still display their original materials, do not worry, they are still segmented as the “empty” category in the final exports.
 
-> **Do not forget** to remove this blueprint from the scene **before** taking captures.\
+> **Do not forget** to remove this blueprint from the scene **before** taking captures.
 
 ![test picture](https://github.com/Plasma-Lab/Unreal-Image-Segmentation-Doc/blob/main/images/test.PNG?raw=true)
 
