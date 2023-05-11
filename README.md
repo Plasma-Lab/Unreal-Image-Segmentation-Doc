@@ -17,6 +17,7 @@ For each element in your scene you wish to label, add two ***actor tags*** to yo
 All elements in the scene that hasn't been tagged will be labeled as the “empty” category (index 0).
 
 ## Testing Segmentation
+> To see the plugin content, do not forget to activate "Show plugin content" in your Content Broser settings.
 
 To test the segmentation, drop the **"BP_Segmentation_test"** blueprint in your scene and press play in the editor. You will see the segmentation colors.
 All elements that you haven't tagged will still display their original materials, do not worry, they are still segmented as the “empty” category in the final exports.
@@ -54,3 +55,9 @@ You can label most kinds of meshes, including static mesh, skeletal mesh, sky sp
 ## My label images are black, what is going on?
 
 The plugin is producing a PNG image containing the class of the object in the red channel (first channel). You will not be able to open it with an image viewer.
+
+
+## Can I change the resolution of my captures?
+
+Yes you can! The plugin default to a 1024 x 1024 capture window. To edit the capture size, go to the "utils" folder and open both **RT_renderTarget_ImgSeg** and **RT_renderTarget_ImgSeg_PP**.
+You can edit the size of the capture in each window, do not forgot to do it on both!
