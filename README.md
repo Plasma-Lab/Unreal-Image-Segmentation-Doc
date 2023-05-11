@@ -61,3 +61,5 @@ The plugin is producing a PNG image containing the class of the object in the re
 
 Yes you can! The plugin default to a 1024 x 1024 capture window. To edit the capture size, go to the "utils" folder and open both **RT_renderTarget_ImgSeg** and **RT_renderTarget_ImgSeg_PP**.
 You can edit the size of the capture in each window, do not forgot to do it on both!
+
+![Edit camera size](https://github.com/Plasma-Lab/Unreal-Image-Segmentation-Doc/blob/main/images/size.PNG?raw=true)
