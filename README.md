@@ -34,7 +34,10 @@ You can set up your own movements for the camera, such as placing it on the hood
 
 ![Place the camera](https://github.com/Plasma-Lab/Unreal-Image-Segmentation-Doc/blob/main/images/BP_camera.PNG?raw=true)
 
-When you are ready to generate your dataset, open the plugin in Window > Image Segmentation. Select the folder where you want to save your captures, the time between each capture, and the number of captures. Press play in the editor, and then press capture.
+When you are ready to generate your dataset, you have to ways of capturing data:
+
+- Automatic: open the plugin in Window > Image Segmentation. Select the folder where you want to save your captures, the time between each capture, and the number of captures. Press play in the editor, and then press capture.
+- Manual: use the Take Screenshots blueprint.
 
   
 
